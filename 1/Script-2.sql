@@ -49,6 +49,6 @@ CREATE TABLE IF NOT EXISTS album_track (
 
 CREATE TABLE IF NOT EXISTS coll_track (
 	id_collection INTEGER references collection(id),
-	id_album INTEGER references track(id),
-	constraint al_tr primary key (id_collection, id_track)
+	id_track INTEGER references track(id),
+	constraint col_tr primary key (id_collection, id_track)
 );
